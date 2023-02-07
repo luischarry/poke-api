@@ -1,50 +1,45 @@
 import React from "react"
 import Link from "next/link"
-import HomeCss from "../styles/Home.module.css"
+import { traerpokemon } from "./api/api"
 export default function Home({ arrayPokemon2 }) {
-
+  
   return (
-    <>
-      <ul>
-        {arrayPokemon2.map((pokemon, index) => {
-          return (
-            <li>
-              <Link href={{pathname:'/pokemon/[name]',
-              query:{name:pokemon.name}
+    <div className="flex-col md:flex w-full p-4 " >
+      {arrayPokemon2.map((pokemon, index) => {
+        return (
+          <div className="border border-white p-2 w-1/3">
+            <Link href={{
+              pathname: '/pokemon/[name]',
+              query: { name: pokemon.name }
             }}>
-                <div>
+              <div className="">
+                <div >
+                  <h3 className="text-lg font-bold">
+                    {pokemon.name}
+                  </h3>
                   <div >
-                    <h3>
-                      {pokemon.name}
-                    </h3>
-                    <div>
-                      {pokemon.types.map((tipo, index) => {
-                        return (
-                          <p>{tipo.type.name}</p>
-                        )
-                      })}
-                    </div>
-                    <img src={pokemon.image} height="100" width={100} />
+                    {pokemon.types.map((tipo, index) => {
+                      return (
+                        <p className="mt-4 font-bold">{tipo.type.name}</p>
+                      )
+                    })}
                   </div>
+                  <img src={pokemon.image} className=" h-32 object-cover mb-4" />
                 </div>
-              </Link>
-            </li>
-          )
-        })
-        }</ul>
+              </div>
+            </Link>
+          </div>
+        )
+      })
+      }
 
-    </>
+    </div>
   )
 }
 export async function getServerSideProps() {
-  const traerpokemon = (numero) => {
-    return fetch(`https://pokeapi.co/api/v2/pokemon/${numero}`)
-      .then((response) => response.json())
-      .then(data => data)
-  }
   let arrayPokemon = []
   for (let i = 1; i <= 20; i++) {
-    let data = await traerpokemon(i)
+    let data = await bringpokemon(i)
     arrayPokemon.push(data)
   }
   let arrayPokemon2 = arrayPokemon.map(pokemon => {
