@@ -1,13 +1,17 @@
-import React from "react"
+import React, { useEffect, useState } from 'react';
 import Link from "next/link"
-import { traerpokemon } from "./api/api"
+import { bringpokemon } from "./api/api"
+import Search from '@/components/search';
+
 export default function Home({ arrayPokemon2 }) {
   
   return (
-    <div className="flex-col md:flex w-full p-4 " >
+    <div className="flex-col md:flex w-full p-4" >
+      <Search></Search>
+      
       {arrayPokemon2.map((pokemon, index) => {
         return (
-          <div className="border border-white p-2 w-1/3">
+          <div className="border border-white p-2 w-1/3 bg-lime-700">
             <Link href={{
               pathname: '/pokemon/[name]',
               query: { name: pokemon.name }
@@ -41,6 +45,7 @@ export async function getServerSideProps() {
   for (let i = 1; i <= 20; i++) {
     let data = await bringpokemon(i)
     arrayPokemon.push(data)
+    
   }
   let arrayPokemon2 = arrayPokemon.map(pokemon => {
     return ({
