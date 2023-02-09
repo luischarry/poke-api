@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react';
 import Link from "next/link"
 import { bringpokemon } from "./api/api"
 import Search from '@/components/search';
-
+import LoadMoreButton from '@/components/button';
 export default function Home({ arrayPokemon2 }) {
   
   return (
     <div className="flex-col md:flex w-full p-4" >
       <Search></Search>
-      
       {arrayPokemon2.map((pokemon, index) => {
         return (
           <div className="border border-white p-2 w-1/3 bg-lime-700">
@@ -36,7 +35,7 @@ export default function Home({ arrayPokemon2 }) {
         )
       })
       }
-
+  <LoadMoreButton></LoadMoreButton>
     </div>
   )
 }

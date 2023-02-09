@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function Pokemon({ pokemon }) {
     const [meal, setMeal] = useState(null);
@@ -14,6 +15,7 @@ export default function Pokemon({ pokemon }) {
     }
     return (
         <div>
+            <Link href={"/"}>Volver</Link>
             <h1>{pokemon.name}</h1>
             <div>
                 {pokemon.types.map((tipo, index) => {
