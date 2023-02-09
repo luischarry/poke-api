@@ -37,12 +37,17 @@ This project consumes data from 2 APIs:
 ### How it works
 ***
 The body of the web page is made up of various elements that have been saved in their respective folder
+
 [![carpetas.png](https://i.postimg.cc/bJS8xj3c/carpetas.png)](https://postimg.cc/34hPhVsn)
 
 <input> makes an api call with the name of the pokemon, if the name is incorrect it will output a message that the name is not correct.
+
 [![buscador.jpg](https://i.postimg.cc/X7fj143n/buscador.jpg)](https://postimg.cc/TpPvp8ps)
+
 "pokemon cards", each pokemon has an id that is passed through params to open another page with the characteristics of said pokemon and a plate of food.
+
 [![caracteristica.jpg](https://i.postimg.cc/3RkrtGrq/caracteristica.jpg)](https://postimg.cc/WFPP3hkm)
+
 ### Points to improve
 
 trying to create a bar to get a list of the following pokemons had a failure in a future update that point will be improved
