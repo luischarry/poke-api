@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import { getServerSide } from "@/pages/api/api";
 const Search = () => {
     const [pokemon, setPokemon] = useState(null);
     const [name, setName] = useState("");
