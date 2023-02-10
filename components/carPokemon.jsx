@@ -10,7 +10,7 @@ const PokemonCard = ({ pokemon }) => {
   return (
     <div
       className={classNames(
-        'border border-white p-2 w-1/3',
+        'border border-white p-2 w-1/3 ',
         {
           'bg-red-500 ': typeClass === 'fire',
           'bg-blue-500': typeClass === 'water',
@@ -26,7 +26,7 @@ const PokemonCard = ({ pokemon }) => {
         }}
       >
         <div >
-          <h3 className="text-4xl mb-2 text-center capitalize ">{pokemon.name}</h3>
+          <h3 className=" mb-2 text-center capitalize ">{pokemon.name}</h3>
           <div style={{ backgroundImage: `url(https://png.pngtree.com/thumb_back/fw800/background/20210225/pngtree-yellow-lightning-sunburst-ray-wallpaper-image_564123.jpg)`, }}>
           <img src={pokemon.image} className="mx-auto" />
           </div>
