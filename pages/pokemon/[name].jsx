@@ -51,7 +51,7 @@ export default function Pokemon({ pokemon }) {
                             </div>
                         </div>
                     </div>
-                    <div className="text-white ml-10 inline-block border-2 border-black rounded-lg shadow-2xl bg-cover bg-center w-full md:w-1/2 p-4" style={{ backgroundImage: `url(https://media.istockphoto.com/id/1145602814/es/foto/textura-de-madera-natural.jpg?b=1&s=612x612&w=0&k=20&c=UZ04Dlqeerfw1Q5jAVs1Wlf8xHFTxDym_wUOR8CIBr0=)`, }}>
+                    <div className="text-white  inline-block border-2 border-black rounded-lg shadow-2xl bg-cover bg-center w-full md:w-1/2 p-4" style={{ backgroundImage: `url(https://media.istockphoto.com/id/1145602814/es/foto/textura-de-madera-natural.jpg?b=1&s=612x612&w=0&k=20&c=UZ04Dlqeerfw1Q5jAVs1Wlf8xHFTxDym_wUOR8CIBr0=)`, }}>
                         <div >
                             <h5 className="mb-2 text-center capitalize">his favorite food:{meal.strMeal}</h5>
                         </div >

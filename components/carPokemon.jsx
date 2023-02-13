@@ -31,7 +31,7 @@ const PokemonCard = ({ pokemon }) => {
           <img src={pokemon.image} className="mx-auto" />
           </div>
           <div>
-            <ul className='list-disc'><h2 className="text-2xl mt-6 mb-2 bg-gray-700 text-white rounded-full w-87 text-center py-2">Types</h2></ul>
+            <ul className='list-disc'><h2 className=" mt-6 mb-2 bg-gray-700 text-white rounded-full w-87 text-center py-2">Types</h2></ul>
             {pokemon.types.map((tipo, index) => {
               return <li className="ml-2 text-left"key={index}>{tipo.type.name}</li>;
             })}
